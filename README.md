@@ -1,12 +1,21 @@
-# React + Vite
+# SWAPI Relational Explorer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Buscador de personajes de Star Wars con **React + fetch**, **debounce**, **paginación**, **drawer de detalle**, **prefetch** y **cache** (memoria + localStorage).  
+Datos: mirror **https://swapi.py4e.com/api/** (evita errores de certificado).
 
-Currently, two official plugins are available:
+## Características
+- Búsqueda con debounce (400 ms)
+- Panel de detalle en **drawer** lateral (se abre al seleccionar)
+- Relaciones: **homeworld**, **films** (ordenados), **starships**, **co-cast**
+- Prefetch en hover y caché ligera con SWR-like
+- Accesible (aria, foco, Esc para cerrar)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Requisitos
+- Node 18+
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Scripts
+```bash
+npm install
+npm run dev    # desarrollo
+npm run build  # producción
+npm run preview
